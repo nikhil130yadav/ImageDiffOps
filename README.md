@@ -13,21 +13,20 @@ Download using pip command -- pip install ImageDiffOps
 
 IMPORT:-
 
-from ImageDiffOps import ImageDiffOpsmageDiffOps
-import matplotlib.pyplot as plt
+    from ImageDiffOps import ImageDiffOpsmageDiffOps
+    import matplotlib.pyplot as plt
 
 
-imDfOps = ImageDiffOps("C:\\Users\\Desktop\\nik\\Test\\marked\\1.png","C:\\Users\\Desktop\\nik\\Test\\unmarked\\1.jpg")
-imgs,cord = imDfOps.detectDiffROI()
-imDfOps.SimilarityScore()
+    imDfOps = ImageDiffOps("C:\\Users\\Desktop\\nik\\Test\\marked\\1.png","C:\\Users\\Desktop\\nik\\Test\\unmarked\\1.jpg")
+    imgs,cord = imDfOps.detectDiffROI()
+    imDfOps.SimilarityScore()
 
-imDfOps.SimilarityScore()
-import matplotlib.pyplot as plt
-
-
-plt.title("extracted image parts where change has happend")
-for img in imgs:
+    imDfOps.SimilarityScore()
+    import matplotlib.pyplot as plt
 
 
-    plt.imshow(img, cmap=plt.cm.gray)
-    plt.show()
+    plt.title("extracted image parts where change has happend")
+    for img in imgs:
+    
+        plt.imshow(img, cmap=plt.cm.gray)
+        plt.show()
